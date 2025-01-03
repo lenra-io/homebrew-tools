@@ -15,7 +15,7 @@ class Dofigen < Formula
   end
   on_linux do
       on_arm do
-          @@file_name = " dofigen-linux-aarch64"
+          @@file_name = "dofigen-linux-aarch64"
           sha256 "ecb153b45ea3a5419b5d4e42f52f7eb64cb8eb52621e53d5230761abb4891bda"
       end
       on_intel do
@@ -24,14 +24,14 @@ class Dofigen < Formula
       end
   end
 
-  url("https://github.com/lenra-io/dofigen/releases/download/v#{version}/#{@@file_name}")
+  url "https://github.com/lenra-io/dofigen/releases/download/v#{version}/#{@@file_name}"
 
   def install
-    bin.install @@file_name => "dofigen"
+    bin.install "#{@@file_name}" => "dofigen"
   end
   test do
     system "#{bin}/dofigen  --version"
-    expected_version = "dofigen #{version}"
+    expected_version = "dofigen #{self.version}"
     actual_version = shell_output("#{bin}/dofigen --version").strip
     assert_match expected_version, actual_version
   end
