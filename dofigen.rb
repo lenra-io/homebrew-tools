@@ -1,5 +1,8 @@
 class Dofigen < Formula
-  @@version = "2.2.0"
+  desc "Dofigen is a Dockerfile generator using a simplified description in YAML or JSON format"
+  homepage "https://github.com/lenra-io/dofigen"
+  version "2.2.0"
+
   on_macos do
       on_arm do
           @@file_name = "dofigen-macos-aarch64"
@@ -21,17 +24,14 @@ class Dofigen < Formula
       end
   end
 
-  desc "Dofigen is a Dockerfile generator using a simplified description in YAML or JSON format"
-  homepage "https://github.com/lenra-io/dofigen"
-  version self.class.version
-  url "https://github.com/lenra-io/dofigen/releases/download/v#{self.class.version}/#{self.class.file_name}"
+  url("https://github.com/lenra-io/dofigen/releases/download/v#{version}/#{@@file_name}")
 
   def install
-      bin.install self.class.file_name => "dofigen"
+    bin.install @@file_name => "dofigen"
   end
   test do
     system "#{bin}/dofigen  --version"
-    expected_version = "dofigen #{self.class.version}"
+    expected_version = "dofigen #{version}"
     actual_version = shell_output("#{bin}/dofigen --version").strip
     assert_match expected_version, actual_version
   end
