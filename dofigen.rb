@@ -6,21 +6,21 @@ class Dofigen < Formula
   on_macos do
       on_arm do
           @@file_name = "dofigen-macos-aarch64"
-          sha256 "3916e8fa80a69624d7e1de0c9bf359d4dd64be60f3c2dea989c3013042055764"
+          sha256 "1fda8f6e8723bc519e6114acd07f64d1de720916a8ce1c6dfbed00a5646ccf1c"
       end
       on_intel do
           @@file_name = "dofigen-macos-x86_64"
-          sha256 "06650ad9b950da80e3c1078f6b6fafbc9284aa8242ab91139b1e5ddb3dca2bd5"
+          sha256 "15722a103cd3f789c8adb4c00a0dc20546fd27e6ae218bf79741a22b587b8aba"
       end
   end
   on_linux do
       on_arm do
           @@file_name = "dofigen-linux-aarch64"
-          sha256 "ca5ccabd26b2c43ebc9b9ad9eecb9415ab3225101fe7ef6ca524e11f75e2ce01"
+          sha256 "8a56498612d52220b1778a38fedaaa13e016eeed6c2f439b09c229f75f055e14"
       end
       on_intel do
           @@file_name = "dofigen-linux-x86_64"
-          sha256 "181b67e8ddd7b6633e9f4ceb298bb821649eb63e077eba3083d2a412dcf63bbb"
+          sha256 "fcaa05b5ff8e49892efc4eedbbe7f3b0dddaee1a6cf11a447b399b754a79e6ab"
       end
   end
 
