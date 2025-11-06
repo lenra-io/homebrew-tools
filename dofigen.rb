@@ -1,26 +1,26 @@
 class Dofigen < Formula
   desc "Dofigen is a Dockerfile generator using a simplified description in YAML or JSON format"
   homepage "https://github.com/lenra-io/dofigen"
-  version "2.5.0"
+  version "2.5.1"
 
   on_macos do
       on_arm do
           @@file_name = "dofigen-macos-aarch64"
-          sha256 "39b86a110644b170963a338646b6d37353fe3df90a40f01a892c472d815bc328"
+          sha256 "093da739b3c82a98d2b8971751735be5bb0bd185b5d555d974d015a81a959011"
       end
       on_intel do
           @@file_name = "dofigen-macos-x86_64"
-          sha256 "cf6e0622793f54714df77db846c48e1a4b6bad96b284479146927cfeb2ebd880"
+          sha256 "37ecd9ae0fdc94d7cf94da2c7c15a5e5b854e5d93fa6d66b41df0c96279918f8"
       end
   end
   on_linux do
       on_arm do
           @@file_name = "dofigen-linux-aarch64"
-          sha256 "32e893f0930e9e557deeaa9a296d0349d7e0a09e3efc6d662f1c302311e868bf"
+          sha256 "0c61c8b4f2e552f26a766046070e5d18cedfd99eaf6d9b4c7b556c6cc15277f1"
       end
       on_intel do
           @@file_name = "dofigen-linux-x86_64"
-          sha256 "0d06db545483368e709e45e50c4a978d96f85fee3b01bf7e0fcab66d1dc890bb"
+          sha256 "a21f09450a05448300cb69f774d5953a1d62633c19113b5c1813c236bc1ad482"
       end
   end
 
